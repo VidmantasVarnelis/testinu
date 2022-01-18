@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.grid {
+				height: 100vh;
+				display: grid;
+				/* Repeat funkcija */
+				/* grid-template-columns: repeat(3, 1fr); */
+				grid-template-columns: repeat(3, 300px);
+
+				/* Repeat su min max funkcija */
+				/* grid-template-columns: repeat(3, minmax(350px, 1fr)); */
+
+				/*  auto fit su repeat */
+				/* grid-template-columns: repeat(auto-fit, 500px); */
+
+				/* grid colums su minmax ir auto fit - responsive */
+				/* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+
+				/*  Tiek su eilute tiek su stulpeliais galioja tos pacios funkcijos*/
+				/* grid-template-rows: 300px 300px; */
+				/* grid-template-rows: repeat(3, minmax(300px, 1fr)); */
+				/* grid-template-rows: repeat(auto-fit, minmax(300px, 1fr)); */
+				/* grid-template-rows: repeat(2, minmax(300px, 1fr)); */
+
+				/* column-gap: 25px; */
+				/* row-gap: 30px; */
+				/* grid-gap: ; */
+				/* gap: 20px; */
+
+				/* grid-template-areas:
+					'header header'
+					'content1 content1 '; */
+				justify-content: center;
+				/* align-content: center; */
+			}
+			.grid-item {
+				background-color: royalblue;
+				height: 6rem;
+				border: 1px solid #333333;
+				color: white;
+				font-size: 24px;
+				height: 100%;
+			}
+			.one {
+				/* grid-area: header; */
+				/* 1 budas */
+				/* grid-column-start: 1; */
+				/* grid-column-end: 4; */
+
+				/* 2 budas */
+				/* grid-column: 1 / 3; */
+				/* Jeigu norim pasirinkti paskutini stulpeli */
+				/* grid-column: 1 / -1; */
+
+				/*  3 budas */
+				/* grid-column: span 3; */
+
+				grid-column: span 2;
+
+				/* lygiai tas pats su eilute */
+
+				/* grid-row: 1/ 3; */
+				/* grid-row: span 3; */
+				/* grid-row: 1 / -1; */
+
+				/* justify-self: center; */
+				align-self: center;
+			}
+			/* .grid-item:nth-child(even) {
+				background-color: green;
+			}
+			.grid-item:nth-child(odd) {
+				background-color: red;
+			} */
+			.flex {
+				display: flex;
+				justify-content: center;
+				height: 100%;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="grid">
+			<div class="grid-item one">
+				<div class="flex">1</div>
+			</div>
+			<div class="grid-item two">2</div>
+			<div class="grid-item three">3</div>
+			<div class="grid-item four">4</div>
+			<div class="grid-item five">5</div>
+			<div class="grid-item six">6</div>
+		</div>
+	</body>
+</html>

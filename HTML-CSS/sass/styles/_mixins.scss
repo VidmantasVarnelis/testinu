@@ -1,0 +1,18 @@
+@mixin BackgroundColor {
+	background-color: purple;
+	color: black;
+}
+// advanced
+@mixin ButtonStyles($color) {
+	background-color: $color;
+	padding: 1rem 2rem;
+	border-radius: 8px;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+// 1 step import this file  to style.scss
+// 2 search for element to apply styles
+// 3 step @include. For apply function
+// syntax
+// @include func_name()

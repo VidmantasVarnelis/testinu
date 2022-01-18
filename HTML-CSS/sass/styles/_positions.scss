@@ -1,0 +1,67 @@
+.parent {
+	background-color: lightcoral;
+	height: 50vh;
+	width: 100%;
+	// relative naudosim dazniasuiai ant tevinio elemento tam kad absolute pozicija turetu pozicija
+	position: relative;
+	// by default visi elementai turi position - static
+	// positions: ---------------
+	// static - default
+	// relative
+	// absolute
+	// fixed
+	// sticky
+	.child-one {
+		background-color: blue;
+		height: 50px;
+		// relative pozicija yra labai panasi i static
+		// position: relative;
+		// su relative - galime naudoti top,bottom, left,right
+		// top: 100px;
+		// left: 50px;
+		// su pozicija relative dazniausiai nenaudosim top bottom right left
+	}
+	.child-two {
+		background-color: lightseagreen;
+		height: 50px;
+		width: 50%;
+		position: absolute;
+		// su absolute - galime naudoti top,bottom, left,right
+		// bottom: 0;
+		// bottom: 50%;
+		// centruojam su tranform // su top -50%
+		// 1 budas dazniau naudojamas
+		// transform: translateY(50%);
+		// 2 budas kai zinome auksti elemento
+		// top: calc(50% - 25px);
+		// tiek rem tiek px viosi unit
+		z-index: 10;
+		right: 100px;
+		top: 0;
+		// absolute iesko arciausiai poziciuonoto tevinio elemento
+		// jeigu nera - ima body
+	}
+	.child-three {
+		// fixed veikia labai panasiai kaip absolute
+		// su fixed - galime naudoti top,bottom, left,right
+		// skirtumas tarp absolute ir fixed tas kad fixed neiesko tevinio elemento pozicijos
+		// bottom: 100px;
+		// left: 50%;
+		top: 0;
+		position: fixed;
+		width: 100%;
+		background-color: mediumslateblue;
+		height: 50px;
+		// z-index galime anudoti tik kai yra pozicija
+		z-index: 11;
+	}
+	.child-four {
+		// su sticky - galime naudoti top,bottom, left,right
+		// jis veikia tik kai yra scroll puslapyje
+		background-color: orange;
+		height: 50px;
+		position: sticky;
+		// turime butinai nurodyti krastine
+		// top: 0;
+	}
+}

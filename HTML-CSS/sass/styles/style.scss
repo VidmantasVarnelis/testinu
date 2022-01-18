@@ -1,0 +1,118 @@
+//Narsykle supranta tik css failo formata.
+@import 'variables';
+@import 'grid';
+@import 'mixins';
+@import 'positions';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.css {
+	padding: 1rem;
+	background-color: lightgray;
+}
+.css .parent-css {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.css .parent-css img {
+	border-radius: 8px;
+	width: 100%;
+	max-width: 600px;
+}
+.css .parent-css button {
+	margin: 1rem 0;
+	padding: 0.5rem 1.5rem;
+	background-color: royalblue;
+	border: none;
+	color: white;
+	border-radius: 1rem;
+	cursor: pointer;
+}
+.break {
+	margin: 2rem 0;
+	text-align: center;
+}
+// Styles with SCSS
+// Sass / Less
+.scss {
+	@include BackgroundColor();
+	// background-color: lightgray;
+	padding: 1rem;
+	//  1 adventage
+	// Styling with nesting
+	.parent-scss {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		img {
+			border-radius: 8px;
+			width: 100%;
+			max-width: 600px;
+		}
+		// Gali buti elementas, gali buti klase, gali but id
+		button {
+			@include BackgroundColor();
+			margin: 1rem 0;
+			padding: 0.5rem 1.5rem;
+			// kintamojo panaudojimas
+			// background-color: $primarycolor;
+			border: none;
+			color: white;
+			border-radius: 1rem;
+			cursor: pointer;
+			// pseudo class naudojam su &:
+			&:hover {
+				background-color: saddlebrown;
+			}
+		}
+		// @media screen and (min-width: 500px){
+
+		// }
+		// &:last-child {
+		// 	color: seagreen;
+		// 	display: none;
+		// }
+	}
+}
+.btn {
+	@include ButtonStyles(red);
+}
+.btn2 {
+	@include ButtonStyles(blue);
+}
+.btn-new {
+	padding: 1rem 2rem;
+	border-radius: 8px;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+.test {
+	display: flex;
+	justify-content: center;
+	padding: 5rem;
+}
+.test__btn {
+	border: 0;
+	background-color: #f4623a;
+	color: white;
+	cursor: pointer;
+	padding: 1.5rem 3rem;
+	border-radius: 99px;
+	&:active,
+	&:focus {
+		// border: 5px solid rgb(181, 181, 255);
+		outline: 3px solid rgba(114, 187, 255, 0.603);
+	}
+}
+.test_img {
+	background-image: url('https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/bg-masthead.jpg');
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+}

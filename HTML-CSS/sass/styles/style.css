@@ -1,0 +1,194 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  padding: 1rem 0;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.container img {
+  max-width: 100%;
+}
+
+.parent {
+  background-color: lightcoral;
+  height: 50vh;
+  width: 100%;
+  position: relative;
+}
+
+.parent .child-one {
+  background-color: blue;
+  height: 50px;
+}
+
+.parent .child-two {
+  background-color: lightseagreen;
+  height: 50px;
+  width: 50%;
+  position: absolute;
+  z-index: 10;
+  right: 100px;
+  top: 0;
+}
+
+.parent .child-three {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: mediumslateblue;
+  height: 50px;
+  z-index: 11;
+}
+
+.parent .child-four {
+  background-color: orange;
+  height: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.css {
+  padding: 1rem;
+  background-color: lightgray;
+}
+
+.css .parent-css {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.css .parent-css img {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.css .parent-css button {
+  margin: 1rem 0;
+  padding: 0.5rem 1.5rem;
+  background-color: royalblue;
+  border: none;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.break {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.scss {
+  background-color: purple;
+  color: black;
+  padding: 1rem;
+}
+
+.scss .parent-scss {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scss .parent-scss img {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.scss .parent-scss button {
+  background-color: purple;
+  color: black;
+  margin: 1rem 0;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.scss .parent-scss button:hover {
+  background-color: saddlebrown;
+}
+
+.btn {
+  background-color: red;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn2 {
+  background-color: blue;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-new {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.test {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5rem;
+}
+
+.test__btn {
+  border: 0;
+  background-color: #f4623a;
+  color: white;
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 99px;
+}
+
+.test__btn:active, .test__btn:focus {
+  outline: 3px solid rgba(114, 187, 255, 0.603);
+}
+
+.test_img {
+  background-image: url("https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/bg-masthead.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=style.css.map */
